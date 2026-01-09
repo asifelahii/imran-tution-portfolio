@@ -1,0 +1,47 @@
+<!-- Services Start -->
+<section class="container-fluid bg-light my-6 py-6" id="services" appFadeIn>
+  <div class="container">
+    <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+      <div class="col-lg-6">
+        <h1 class="display-5 mb-0">My Tutoring Services</h1>
+      </div>
+      <div class="col-lg-6 text-lg-end">
+        <a class="liquid-glass-btn" href="#contact">
+          <span class="btn-content">
+            <i class="fa fa-calendar-check me-2"></i>
+            <span class="btn-text">Book a Free Demo</span>
+          </span>
+          <span class="liquid-shine"></span>
+        </a>
+      </div>
+    </div>
+
+    <!-- CUSTOMIZATION: Update services.json to modify these service cards -->
+    <div class="row g-4">
+      <div
+        class="col-lg-6 wow fadeInUp"
+        *ngFor="let service of services; let i = index"
+        [attr.data-wow-delay]="0.1 + i * 0.2 + 's'"
+      >
+        <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+          <div class="bg-icon flex-shrink-0 mb-3">
+            <i [class]="'fa ' + service.icon + ' fa-2x text-primary'"></i>
+          </div>
+          <div class="ms-sm-4">
+            <h4 class="mb-3">{{ service.title }}</h4>
+            <h6 class="mb-3">{{ service.subtitle }}</h6>
+            <span>{{ service.description }}</span>
+
+            <!-- Features List -->
+            <ul class="mt-3" *ngIf="service.features && service.features.length > 0">
+              <li *ngFor="let feature of service.features" class="mb-2">
+                <i class="fa fa-check text-primary me-2"></i>{{ feature }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Services End -->

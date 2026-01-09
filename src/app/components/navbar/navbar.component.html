@@ -1,0 +1,67 @@
+<!-- ⚠️ CUSTOMIZATION: Update tutor name in navbar brand -->
+<nav
+  class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn"
+  [class.sticky-top]="isScrolled"
+  data-wow-delay="0.1s"
+>
+  <a
+    (click)="scrollToSection('home')"
+    class="navbar-brand d-block d-lg-none"
+    style="cursor: pointer"
+  >
+    <h1 class="m-0 text-primary"><i class="fa fa-graduation-cap me-3"></i>Al-Imran</h1>
+  </a>
+
+  <button
+    type="button"
+    class="navbar-toggler"
+    (click)="toggleMobileMenu()"
+    [class.collapsed]="!isMobileMenuOpen"
+    [attr.aria-expanded]="isMobileMenuOpen"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div
+    class="collapse navbar-collapse justify-content-between py-4 py-lg-0"
+    [class.show]="isMobileMenuOpen"
+  >
+    <nav class="navbar-nav ms-auto">
+      <a (click)="scrollToSection('home')" class="nav-item nav-link active" style="cursor: pointer"
+        >Home</a
+      >
+      <a (click)="scrollToSection('about')" class="nav-item nav-link" style="cursor: pointer"
+        >About</a
+      >
+      <a (click)="scrollToSection('subjects')" class="nav-item nav-link" style="cursor: pointer"
+        >Subjects</a
+      >
+      <a (click)="scrollToSection('services')" class="nav-item nav-link" style="cursor: pointer"
+        >Services</a
+      >
+    </nav>
+
+    <a
+      (click)="scrollToSection('home')"
+      class="navbar-brand bg-secondary py-3 px-4 mx-3 d-none d-lg-block"
+      style="cursor: pointer"
+    >
+      <h1 class="text-primary m-0"><i class="fa fa-graduation-cap me-2"></i>Al-Imran</h1>
+    </a>
+
+    <nav class="navbar-nav me-auto">
+      <a (click)="scrollToSection('courses')" class="nav-item nav-link" style="cursor: pointer"
+        >Courses</a
+      >
+      <a (click)="scrollToSection('faculty')" class="nav-item nav-link" style="cursor: pointer"
+        >Faculty</a
+      >
+      <a (click)="scrollToSection('testimonials')" class="nav-item nav-link" style="cursor: pointer"
+        >Reviews</a
+      >
+      <a (click)="scrollToSection('contact')" class="nav-item nav-link" style="cursor: pointer"
+        >Contact</a
+      >
+    </nav>
+  </div>
+</nav>

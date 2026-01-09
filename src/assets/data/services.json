@@ -1,0 +1,63 @@
+{
+  "INSTRUCTIONS": "📝 CUSTOMIZE THIS FILE - Define your teaching services",
+  "services": [
+    {
+      "id": 1,
+      "title": "One-on-One Tutoring",
+      "description": "Personalized attention with customized lesson plans tailored to individual learning pace and style.",
+      "icon": "fa-user-graduate",
+      "delay": "0.1s"
+    },
+    {
+      "id": 2,
+      "title": "Group Coaching Classes",
+      "description": "Interactive batch learning with peer collaboration and competitive environment for better results.",
+      "icon": "fa-users",
+      "delay": "0.3s"
+    },
+    {
+      "id": 3,
+      "title": "Online Live Sessions",
+      "description": "Convenient online classes with interactive whiteboard, recorded sessions, and flexible timings.",
+      "icon": "fa-video",
+      "delay": "0.5s"
+    },
+    {
+      "id": 4,
+      "title": "Exam Preparation",
+      "description": "Focused preparation for board exams, entrance tests (JEE, NEET, SAT) with mock tests and strategies.",
+      "icon": "fa-graduation-cap",
+      "delay": "0.1s"
+    },
+    {
+      "id": 5,
+      "title": "Doubt Clearing Sessions",
+      "description": "Dedicated time slots for clearing doubts and concept reinforcement outside regular classes.",
+      "icon": "fa-question-circle",
+      "delay": "0.3s"
+    },
+    {
+      "id": 6,
+      "title": "Study Material Provided",
+      "description": "Comprehensive notes, practice worksheets, previous year papers, and reference materials included.",
+      "icon": "fa-book-open",
+      "delay": "0.5s"
+    }
+  ],
+  "appStructure": {
+    "AppComponent": "Root",
+    "LoadingSpinner": "conditional",
+    "MainContainer": {
+      "app-navbar": true,
+      "app-hero": true,
+      "app-about": true,
+      "app-subjects": true,
+      "app-services": true,
+      "app-courses": true,
+      "app-faculty": "optional",
+      "app-testimonials": true,
+      "app-contact": true,
+      "app-footer": true
+    }
+  }
+}

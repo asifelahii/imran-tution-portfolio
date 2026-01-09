@@ -1,0 +1,46 @@
+<!-- Loading Spinner -->
+<div
+  id="spinner"
+  class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+  *ngIf="isLoading"
+>
+  <div class="spinner-border text-primary" style="width: 3rem; height: 3rem" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+
+<!-- Main Application -->
+<div class="container-xxl bg-white p-0" *ngIf="!isLoading">
+  <!-- Navbar -->
+  <app-navbar></app-navbar>
+
+  <!-- Hero Section -->
+  <app-hero></app-hero>
+
+  <!-- About Section -->
+  <app-about></app-about>
+
+  <!-- Subjects/Skills Section -->
+  <app-subjects></app-subjects>
+
+  <!-- Services Section -->
+  <app-services></app-services>
+
+  <!-- Courses Section -->
+  <app-courses></app-courses>
+
+  <!-- Faculty/Team Section -->
+  <!-- CUSTOMIZATION: Comment out this section if you're a solo tutor -->
+  <app-faculty></app-faculty>
+
+  <!-- Testimonials Section -->
+  <app-testimonials></app-testimonials>
+
+  <!-- Contact Section -->
+  <app-contact></app-contact>
+
+  <!-- Footer -->
+  <app-footer></app-footer>
+</div>
+
+<router-outlet></router-outlet>

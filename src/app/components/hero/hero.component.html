@@ -1,0 +1,86 @@
+<!-- ⚠️ CUSTOMIZATION: Update hero section content and background image -->
+<div class="container-fluid bg-light mb-6" id="home">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6 py-6 pb-0 pt-lg-0">
+        <h3 class="text-primary mb-3" *ngIf="tutorProfile">
+          <!-- ⚠️ CHANGE THIS: Update greeting text in tutor-profile.json -->
+          {{ tutorProfile.greeting }}
+        </h3>
+        <h1 class="display-3 mb-3" *ngIf="tutorProfile">
+          <!-- ⚠️ CHANGE THIS: Update full name in tutor-profile.json -->
+          I'm {{ tutorProfile.fullName }}
+        </h1>
+        <h2 class="typed-text-output d-inline text-primary">
+          {{ typedText }}<span class="typed-cursor">|</span>
+        </h2>
+        <div class="d-flex align-items-center pt-5">
+          <!-- ⚠️ CHANGE THIS: Update CV/Resume link in tutor-profile.json -->
+          <a *ngIf="tutorProfile" [href]="tutorProfile.cvLink" class="liquid-glass-cv-btn" download>
+            <span class="btn-content">
+              <i class="fa fa-download"></i>
+              <span class="btn-text">Download CV</span>
+            </span>
+            <span class="liquid-shine"></span>
+          </a>
+          <!-- ⚠️ CHANGE THIS: Update video link if you want intro video -->
+          <button
+            type="button"
+            class="btn-play"
+            data-bs-toggle="modal"
+            data-bs-target="#videoModal"
+            *ngIf="tutorProfile && tutorProfile.introVideoLink"
+          >
+            <span></span>
+          </button>
+          <h5
+            class="ms-4 mb-0 d-none d-sm-block"
+            *ngIf="tutorProfile && tutorProfile.introVideoLink"
+          >
+            Watch Introduction
+          </h5>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="hero-image-wrapper">
+          <img
+            class="img-fluid hero-profile-image"
+            [src]="tutorProfile?.profileImage || 'assets/images/tutor-image.png'"
+            alt="Tutor Profile"
+          />
+          <div class="image-glow"></div>
+        </div>
+        <!-- ⚠️ CHANGE THIS: Replace profile image -->
+        <!-- Place your image at: src/assets/images/profile.png -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Video Modal - Optional -->
+<div
+  class="modal fade"
+  id="videoModal"
+  tabindex="-1"
+  *ngIf="tutorProfile && tutorProfile.introVideoLink"
+>
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Introduction Video</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-0">
+        <div class="ratio ratio-16x9">
+          <iframe
+            [src]="tutorProfile.introVideoLink"
+            allowfullscreen
+            allowscriptaccess="always"
+            allow="autoplay"
+          >
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

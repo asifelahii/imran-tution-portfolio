@@ -1,0 +1,345 @@
+<!-- Contact Start -->
+<section class="container-xxl pb-6" id="contact" appFadeIn>
+  <div class="container">
+    <!-- Section Header -->
+    <div class="row mb-5 text-center">
+      <div class="col-12">
+        <h1 class="display-4 mb-3">Get In <span class="text-primary">Touch</span></h1>
+        <p class="lead text-secondary">
+          Have questions? Let's discuss how I can help you achieve your academic goals
+        </p>
+      </div>
+    </div>
+
+    <div class="row g-4 mb-5" *ngIf="contactInfo">
+      <!-- Contact Info Cards -->
+      <div class="col-lg-4 col-md-6">
+        <div class="contact-info-card text-center">
+          <div class="contact-icon">
+            <i class="fa fa-map-marker-alt"></i>
+          </div>
+          <h5 class="mt-3 mb-2">Location</h5>
+          <p class="text-secondary mb-0">{{ contactInfo.address }}</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="contact-info-card text-center">
+          <div class="contact-icon">
+            <i class="fa fa-phone-alt"></i>
+          </div>
+          <h5 class="mt-3 mb-2">Call Me</h5>
+          <a [href]="'tel:' + contactInfo.phone" class="text-primary fw-bold text-decoration-none">
+            {{ contactInfo.phone }}
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="contact-info-card text-center">
+          <div class="contact-icon">
+            <i class="fa fa-envelope"></i>
+          </div>
+          <h5 class="mt-3 mb-2">Email Me</h5>
+          <a
+            [href]="'mailto:' + contactInfo.email"
+            class="text-primary fw-bold text-decoration-none"
+          >
+            {{ contactInfo.email }}
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-5">
+      <!-- Quick Contact & Social -->
+      <div class="col-lg-5">
+        <div class="glass-contact-card p-4">
+          <h3 class="mb-4">
+            <i class="fa fa-calendar-check text-primary me-2"></i>Book a Free Demo
+          </h3>
+          <p class="mb-4">
+            Experience my teaching method with a complimentary demo session. No commitments
+            required!
+          </p>
+
+          <div class="demo-features mb-4">
+            <div class="feature-item mb-3">
+              <i class="fa fa-check-circle text-primary me-2"></i>
+              <span>30-minute personalized session</span>
+            </div>
+            <div class="feature-item mb-3">
+              <i class="fa fa-check-circle text-primary me-2"></i>
+              <span>Identify your learning gaps</span>
+            </div>
+            <div class="feature-item mb-3">
+              <i class="fa fa-check-circle text-primary me-2"></i>
+              <span>Get a customized study plan</span>
+            </div>
+          </div>
+
+          <div class="social-connect">
+            <h5 class="mb-3">Connect on Social Media</h5>
+            <div class="d-flex gap-2">
+              <a
+                class="liquid-glass-social-btn"
+                [href]="contactInfo.socialLinks.facebook"
+                *ngIf="contactInfo.socialLinks.facebook"
+                target="_blank"
+              >
+                <span class="btn-content">
+                  <i class="fab fa-facebook-f"></i>
+                </span>
+                <span class="liquid-shine"></span>
+              </a>
+              <a
+                class="liquid-glass-social-btn"
+                [href]="contactInfo.socialLinks.twitter"
+                *ngIf="contactInfo.socialLinks.twitter"
+                target="_blank"
+              >
+                <span class="btn-content">
+                  <i class="fab fa-twitter"></i>
+                </span>
+                <span class="liquid-shine"></span>
+              </a>
+              <a
+                class="liquid-glass-social-btn"
+                [href]="contactInfo.socialLinks.linkedin"
+                *ngIf="contactInfo.socialLinks.linkedin"
+                target="_blank"
+              >
+                <span class="btn-content">
+                  <i class="fab fa-linkedin-in"></i>
+                </span>
+                <span class="liquid-shine"></span>
+              </a>
+              <a
+                class="liquid-glass-social-btn"
+                [href]="contactInfo.socialLinks.instagram"
+                *ngIf="contactInfo.socialLinks.instagram"
+                target="_blank"
+              >
+                <span class="btn-content">
+                  <i class="fab fa-instagram"></i>
+                </span>
+                <span class="liquid-shine"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-lg-7">
+        <div class="glass-contact-card p-4">
+          <h3 class="mb-4"><i class="fa fa-comment-dots text-primary me-2"></i>Send a Message</h3>
+
+          <form (ngSubmit)="onSubmit()" #contactForm="ngForm">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input
+                    type="text"
+                    class="form-control glass-input"
+                    id="name"
+                    name="name"
+                    [(ngModel)]="formData.name"
+                    #nameField="ngModel"
+                    placeholder=" "
+                    required
+                    minlength="3"
+                    maxlength="50"
+                    [class.is-invalid]="nameField.invalid && nameField.touched"
+                    [class.is-valid]="nameField.valid && nameField.touched"
+                  />
+                  <label for="name"><i class="fa fa-user me-2"></i>Your Name</label>
+                  <div class="invalid-feedback" *ngIf="nameField.invalid && nameField.touched">
+                    <small *ngIf="nameField.errors?.['required']">Name is required</small>
+                    <small *ngIf="nameField.errors?.['minlength']"
+                      >Name must be at least 3 characters</small
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input
+                    type="email"
+                    class="form-control glass-input"
+                    id="email"
+                    name="email"
+                    [(ngModel)]="formData.email"
+                    #emailField="ngModel"
+                    placeholder=" "
+                    required
+                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                    [class.is-invalid]="emailField.invalid && emailField.touched"
+                    [class.is-valid]="emailField.valid && emailField.touched"
+                  />
+                  <label for="email"><i class="fa fa-envelope me-2"></i>Your Email</label>
+                  <div class="invalid-feedback" *ngIf="emailField.invalid && emailField.touched">
+                    <small *ngIf="emailField.errors?.['required']">Email is required</small>
+                    <small *ngIf="emailField.errors?.['pattern']"
+                      >Email must contain @ and a valid domain</small
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input
+                    type="tel"
+                    class="form-control glass-input"
+                    id="phone"
+                    name="phone"
+                    [(ngModel)]="formData.phone"
+                    #phoneField="ngModel"
+                    placeholder=" "
+                    pattern="[0-9]{11,15}"
+                    [class.is-invalid]="phoneField.invalid && phoneField.touched"
+                    [class.is-valid]="phoneField.valid && phoneField.touched && formData.phone"
+                  />
+                  <label for="phone"><i class="fa fa-phone me-2"></i>Phone (Optional)</label>
+                  <div class="invalid-feedback" *ngIf="phoneField.invalid && phoneField.touched">
+                    <small *ngIf="phoneField.errors?.['pattern']"
+                      >Phone must contain only digits (minimum 11 digits)</small
+                    >
+                  </div>
+                  <div class="invalid-feedback" *ngIf="phoneField.invalid && phoneField.touched">
+                    <small *ngIf="phoneField.errors?.['pattern']"
+                      >Please enter a valid phone number (10-15 digits)</small
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <select
+                    class="form-select glass-input"
+                    id="course"
+                    name="course"
+                    [(ngModel)]="formData.course"
+                    #courseField="ngModel"
+                    [class.is-valid]="courseField.valid && courseField.touched && formData.course"
+                  >
+                    <option value="">Select Course</option>
+                    <option value="mathematics">Mathematics</option>
+                    <option value="physics">Physics</option>
+                    <option value="chemistry">Chemistry</option>
+                    <option value="biology">Biology</option>
+                    <option value="general-science">General Science</option>
+                  </select>
+                  <label for="course"><i class="fa fa-book me-2"></i>Interested Course</label>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-floating">
+                  <input
+                    type="text"
+                    class="form-control glass-input"
+                    id="subject"
+                    name="subject"
+                    [(ngModel)]="formData.subject"
+                    #subjectField="ngModel"
+                    placeholder=" "
+                    required
+                    minlength="3"
+                    maxlength="100"
+                    [class.is-invalid]="subjectField.invalid && subjectField.touched"
+                    [class.is-valid]="subjectField.valid && subjectField.touched"
+                  />
+                  <label for="subject"><i class="fa fa-tag me-2"></i>Subject</label>
+                  <div
+                    class="invalid-feedback"
+                    *ngIf="subjectField.invalid && subjectField.touched"
+                  >
+                    <small *ngIf="subjectField.errors?.['required']">Subject is required</small>
+                    <small *ngIf="subjectField.errors?.['minlength']"
+                      >Subject must be at least 3 characters</small
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-floating">
+                  <textarea
+                    class="form-control glass-input"
+                    placeholder=" "
+                    id="message"
+                    name="message"
+                    [(ngModel)]="formData.message"
+                    #messageField="ngModel"
+                    style="height: 120px"
+                    required
+                    minlength="10"
+                    maxlength="500"
+                    [class.is-invalid]="messageField.invalid && messageField.touched"
+                    [class.is-valid]="messageField.valid && messageField.touched"
+                  ></textarea>
+                  <label for="message"><i class="fa fa-comment me-2"></i>Your Message</label>
+                  <div
+                    class="invalid-feedback"
+                    *ngIf="messageField.invalid && messageField.touched"
+                  >
+                    <small *ngIf="messageField.errors?.['required']">Message is required</small>
+                    <small *ngIf="messageField.errors?.['minlength']"
+                      >Message must be at least 10 characters</small
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <button
+                  class="liquid-glass-btn w-100"
+                  type="submit"
+                  [disabled]="!contactForm.form.valid || isSubmitting"
+                >
+                  <span class="btn-content">
+                    <i class="fa fa-paper-plane me-2"></i>
+                    <span class="btn-text" *ngIf="!isSubmitting">Send Message</span>
+                    <span class="btn-text" *ngIf="isSubmitting">
+                      <i class="fa fa-spinner fa-spin me-2"></i>Sending...
+                    </span>
+                  </span>
+                  <span class="liquid-shine"></span>
+                </button>
+              </div>
+
+              <!-- Success/Error Messages -->
+              <div class="col-12" *ngIf="submitSuccess">
+                <div class="alert alert-success glass-alert">
+                  <i class="fa fa-check-circle me-2"></i>
+                  <strong>Success!</strong> Your message has been sent. We'll get back to you within
+                  24 hours.
+                </div>
+              </div>
+              <div class="col-12" *ngIf="submitError">
+                <div class="alert alert-danger glass-alert">
+                  <i class="fa fa-exclamation-circle me-2"></i>
+                  <strong>Error!</strong> Something went wrong. Please try again or contact us
+                  directly.
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Google Map -->
+<!-- CUSTOMIZATION: Replace Google Maps embed URL with your location -->
+<div class="container-xxl pt-5 px-0 wow fadeInUp" data-wow-delay="0.1s" *ngIf="contactInfo">
+  <iframe
+    class="w-100 mb-n2"
+    style="height: 450px"
+    [src]="contactInfo.mapUrl | safe : 'resourceUrl'"
+    frameborder="0"
+    allowfullscreen=""
+    aria-hidden="false"
+    tabindex="0"
+  ></iframe>
+</div>
+<!-- Contact End -->

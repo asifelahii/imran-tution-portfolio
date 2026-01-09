@@ -1,0 +1,47 @@
+{
+  "INSTRUCTIONS": "📝 CUSTOMIZE THIS FILE - Add student/parent testimonials. IMAGES: Optional, place in src/assets/images/testimonials/",
+  "testimonials": [
+    {
+      "id": 1,
+      "studentName": "Rakib Hassan",
+      "parentName": "Mrs. Sultana",
+      "comment": "Al-Imran sir's teaching method is outstanding! My son's mathematics scores improved from 65% to 91% in just 4 months. He explains complex topics in such a simple way that even difficult concepts become easy to understand.",
+      "rating": 5,
+      "imageUrl": "https://randomuser.me/api/portraits/men/32.jpg",
+      "course": "SSC Mathematics"
+    },
+    {
+      "id": 2,
+      "studentName": "Fatima Akter",
+      "comment": "Best science tutor in Joypurhat! I was struggling with physics and chemistry, but after joining Al-Imran sir's classes, I can now solve any problem confidently. Highly recommended for SSC and HSC students!",
+      "rating": 5,
+      "imageUrl": "https://randomuser.me/api/portraits/women/44.jpg",
+      "course": "SSC Science"
+    },
+    {
+      "id": 3,
+      "studentName": "Arif Islam",
+      "parentName": "Mr. Kamal",
+      "comment": "My daughter scored A+ in mathematics thanks to Al-Imran sir's dedicated teaching. He is always available to clear doubts and provides excellent study materials. Very patient and caring teacher!",
+      "rating": 5,
+      "imageUrl": "https://randomuser.me/api/portraits/men/67.jpg",
+      "course": "HSC Mathematics"
+    },
+    {
+      "id": 4,
+      "studentName": "Nusrat Jahan",
+      "comment": "Excellent tutor! The way he explains difficult math problems makes learning enjoyable. I used to be scared of mathematics, but now it's my favorite subject. Thank you, Al-Imran sir!",
+      "rating": 5,
+      "imageUrl": "https://randomuser.me/api/portraits/women/68.jpg",
+      "course": "Class 9-10 Mathematics"
+    },
+    {
+      "id": 5,
+      "studentName": "Saiful Rahman",
+      "comment": "I improved my physics understanding significantly. Al-Imran sir uses real-life examples to explain concepts which makes everything crystal clear. Best investment for my education!",
+      "rating": 5,
+      "imageUrl": "https://randomuser.me/api/portraits/men/85.jpg",
+      "course": "HSC Physics"
+    }
+  ]
+}

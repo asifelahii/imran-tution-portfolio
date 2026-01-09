@@ -1,0 +1,319 @@
+/* Faculty Section Styling */
+
+/* Section Title */
+.faculty-title {
+  color: #2c3e50;
+  font-weight: 800;
+}
+
+.faculty-title-gradient {
+  background: linear-gradient(135deg, #3498db, #e74c3c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+}
+
+/* Faculty Glass Card */
+.faculty-glass-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.9));
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 2px solid rgba(52, 152, 219, 0.2);
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.faculty-glass-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 60px rgba(52, 152, 219, 0.25);
+  border-color: rgba(231, 76, 60, 0.3);
+}
+
+/* Faculty Avatar Wrapper */
+.faculty-avatar-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(236, 240, 241, 0.5), rgba(189, 195, 199, 0.3));
+}
+
+/* Liquid Glass Avatar */
+.faculty-liquid-avatar {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(52, 152, 219, 0.9), rgba(231, 76, 60, 0.9));
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 4px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 15px 50px rgba(52, 152, 219, 0.4), inset 0 2px 0 rgba(255, 255, 255, 0.4),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  animation: pulse-glow-avatar 4s ease-in-out infinite;
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+.faculty-glass-card:hover .faculty-liquid-avatar {
+  transform: scale(1.1);
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 20px 70px rgba(52, 152, 219, 0.6), 0 0 40px rgba(231, 76, 60, 0.4),
+    inset 0 2px 0 rgba(255, 255, 255, 0.4), inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+}
+
+.faculty-avatar-initials {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: white;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  letter-spacing: 2px;
+  position: relative;
+  z-index: 2;
+}
+
+.faculty-liquid-avatar .liquid-shine {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.6s ease;
+  pointer-events: none;
+  z-index: 1;
+  animation: avatar-shine-pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse-glow-avatar {
+  0%,
+  100% {
+    box-shadow: 0 15px 50px rgba(52, 152, 219, 0.4), inset 0 2px 0 rgba(255, 255, 255, 0.4),
+      inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 20px 60px rgba(52, 152, 219, 0.6), 0 0 30px rgba(231, 76, 60, 0.4),
+      inset 0 2px 0 rgba(255, 255, 255, 0.4), inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
+@keyframes avatar-shine-pulse {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
+}
+
+/* Faculty Overlay */
+.faculty-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(52, 152, 219, 0.9), rgba(231, 76, 60, 0.9));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.faculty-glass-card:hover .faculty-overlay {
+  opacity: 1;
+}
+
+/* Faculty Social Buttons */
+.faculty-social {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.faculty-social-btn {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  text-decoration: none;
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.faculty-glass-card:hover .faculty-social-btn {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.faculty-social-btn:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.faculty-social-btn:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.faculty-social-btn:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.faculty-social-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.6s ease;
+}
+
+.faculty-social-btn:hover::before {
+  left: 100%;
+}
+
+.faculty-social-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.3);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.faculty-social-btn:hover::after {
+  opacity: 1;
+}
+
+.faculty-social-btn .btn-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+  transition: all 0.4s ease;
+}
+
+.faculty-social-btn:hover .btn-content {
+  transform: scale(1.3) rotate(360deg);
+}
+
+.faculty-social-btn .liquid-shine {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.5s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.faculty-social-btn:hover .liquid-shine {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Faculty Image Glow */
+.faculty-image-glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(52, 152, 219, 0.2) 0%, transparent 70%);
+  opacity: 0;
+  transition: all 0.5s ease;
+  pointer-events: none;
+}
+
+.faculty-glass-card:hover .faculty-image-glow {
+  opacity: 1;
+}
+
+/* Faculty Info Section */
+.faculty-info {
+  padding: 30px 25px;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.faculty-name {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.faculty-role {
+  background: linear-gradient(135deg, #3498db, #e74c3c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.faculty-details {
+  margin-top: 15px;
+}
+
+.faculty-qualification,
+.faculty-experience {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.faculty-qualification i,
+.faculty-experience i {
+  color: #3498db;
+  font-size: 0.85rem;
+}

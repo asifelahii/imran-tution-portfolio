@@ -1,0 +1,66 @@
+<!-- Testimonials Start -->
+<section class="container-fluid bg-light py-6 my-6" id="testimonials" appFadeIn>
+  <div class="container">
+    <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+      <div class="col-lg-6">
+        <h1 class="display-5 mb-0">Student & Parent Reviews</h1>
+      </div>
+    </div>
+
+    <!-- CUSTOMIZATION: Update testimonials.json with actual reviews -->
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <div class="testimonial-carousel">
+          <div class="testimonial-item text-center" *ngIf="testimonials.length > 0">
+            <div class="liquid-glass-avatar mx-auto mb-4">
+              <span class="avatar-initials">
+                {{ getInitials(testimonials[currentIndex]?.name || '') }}
+              </span>
+              <span class="liquid-shine"></span>
+            </div>
+            <p class="fs-5 fst-italic">
+              <i class="fa fa-quote-left text-primary me-3"></i>
+              {{ testimonials[currentIndex]?.review }}
+              <i class="fa fa-quote-right text-primary ms-3"></i>
+            </p>
+            <div class="stars mb-3">
+              <i
+                class="fa fa-star text-warning"
+                *ngFor="
+                  let star of [1, 2, 3, 4, 5].slice(0, testimonials[currentIndex]?.rating || 5)
+                "
+              ></i>
+            </div>
+            <h5 class="mb-1">{{ testimonials[currentIndex]?.name }}</h5>
+            <span class="text-muted">{{ testimonials[currentIndex]?.relation }}</span>
+          </div>
+
+          <!-- Navigation -->
+          <div class="d-flex justify-content-center mt-4">
+            <button class="liquid-glass-btn-circle me-3" (click)="previous()">
+              <span class="btn-content">
+                <i class="fa fa-arrow-left"></i>
+              </span>
+              <span class="liquid-shine"></span>
+            </button>
+            <div class="d-flex align-items-center mx-3">
+              <span
+                class="dot mx-1"
+                *ngFor="let testimonial of testimonials; let i = index"
+                [class.active]="i === currentIndex"
+                (click)="goToSlide(i)"
+              ></span>
+            </div>
+            <button class="liquid-glass-btn-circle ms-3" (click)="next()">
+              <span class="btn-content">
+                <i class="fa fa-arrow-right"></i>
+              </span>
+              <span class="liquid-shine"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Testimonials End -->

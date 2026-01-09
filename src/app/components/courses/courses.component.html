@@ -1,0 +1,60 @@
+<!-- Courses Start -->
+<section class="container-xxl py-6 pt-5" id="courses" appFadeIn>
+  <div class="container">
+    <div class="row g-5 mb-5 align-items-center wow fadeInUp" data-wow-delay="0.1s">
+      <div class="col-lg-6">
+        <h1 class="display-5 mb-0">Available Courses</h1>
+      </div>
+      <div class="col-lg-6 text-lg-end">
+        <ul class="list-inline mx-n3 mb-0" id="course-filters">
+          <li
+            class="mx-3"
+            *ngFor="let category of categories"
+            [class.active]="selectedCategory === category"
+            (click)="filterCourses(category)"
+          >
+            {{ category | titlecase }}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- CUSTOMIZATION: Update courses.json to modify course offerings -->
+    <div class="row g-4 course-container wow fadeInUp" data-wow-delay="0.5s">
+      <div
+        class="col-lg-4 col-md-6 course-item"
+        *ngFor="let course of courses | courseFilter : selectedCategory"
+      >
+        <div class="course-img rounded overflow-hidden">
+          <!-- CUSTOMIZATION: Replace course images in assets/images/courses/ -->
+          <img class="img-fluid" [src]="course.image" [alt]="course.title" />
+          <div class="course-overlay">
+            <a class="btn btn-square btn-outline-light mx-1" [href]="course.image">
+              <i class="fa fa-eye"></i>
+            </a>
+            <a class="btn btn-square btn-outline-light mx-1" [href]="'#course-' + course.id">
+              <i class="fa fa-link"></i>
+            </a>
+          </div>
+        </div>
+        <div class="course-info pt-3">
+          <h4 class="text-uppercase mb-3">{{ course.title }}</h4>
+          <p class="mb-2"><i class="fa fa-clock text-primary me-2"></i>{{ course.duration }}</p>
+          <p class="mb-2"><i class="fa fa-users text-primary me-2"></i>{{ course.mode }}</p>
+          <p class="text-muted mb-3">{{ course.description }}</p>
+          <div class="d-flex justify-content-between align-items-center">
+            <span class="text-primary fw-bold">{{ course.price }}</span>
+            <a href="#contact" class="liquid-glass-btn-sm">
+              <span class="btn-content">
+                <i class="fa fa-user-plus me-1"></i>
+                <span class="btn-text">Enroll</span>
+              </span>
+              <span class="liquid-shine"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Courses End -->

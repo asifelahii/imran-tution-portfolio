@@ -1,0 +1,81 @@
+<!-- Faculty/Team Start -->
+<section class="container-xxl py-6 pb-5" id="faculty" appFadeIn>
+  <div class="container">
+    <!-- Section Header -->
+    <div class="row mb-5 text-center">
+      <div class="col-12">
+        <h1 class="display-4 mb-3">
+          <span class="faculty-title">Our Expert </span>
+          <span class="faculty-title-gradient">Faculty</span>
+        </h1>
+        <p class="lead text-secondary">Meet our dedicated team of experienced educators</p>
+      </div>
+    </div>
+
+    <!-- CUSTOMIZATION: Update faculty.json to modify team members -->
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6" *ngFor="let member of facultyMembers; let i = index">
+        <div class="faculty-glass-card">
+          <div class="faculty-avatar-wrapper">
+            <!-- Liquid Glass Avatar -->
+            <div class="faculty-liquid-avatar">
+              <span class="faculty-avatar-initials">{{ getInitials(member.name) }}</span>
+              <span class="liquid-shine"></span>
+            </div>
+            <div class="faculty-overlay">
+              <div class="faculty-social">
+                <a
+                  class="faculty-social-btn"
+                  [href]="member.socialLinks?.facebook"
+                  *ngIf="member.socialLinks?.facebook"
+                  target="_blank"
+                >
+                  <span class="btn-content">
+                    <i class="fab fa-facebook-f"></i>
+                  </span>
+                  <span class="liquid-shine"></span>
+                </a>
+                <a
+                  class="faculty-social-btn"
+                  [href]="member.socialLinks?.twitter"
+                  *ngIf="member.socialLinks?.twitter"
+                  target="_blank"
+                >
+                  <span class="btn-content">
+                    <i class="fab fa-twitter"></i>
+                  </span>
+                  <span class="liquid-shine"></span>
+                </a>
+                <a
+                  class="faculty-social-btn"
+                  [href]="member.socialLinks?.linkedin"
+                  *ngIf="member.socialLinks?.linkedin"
+                  target="_blank"
+                >
+                  <span class="btn-content">
+                    <i class="fab fa-linkedin-in"></i>
+                  </span>
+                  <span class="liquid-shine"></span>
+                </a>
+              </div>
+            </div>
+            <div class="faculty-image-glow"></div>
+          </div>
+          <div class="faculty-info">
+            <h5 class="faculty-name">{{ member.name }}</h5>
+            <p class="faculty-role">{{ member.role }}</p>
+            <div class="faculty-details">
+              <p class="faculty-qualification">
+                <i class="fa fa-graduation-cap me-2"></i>{{ member.qualification }}
+              </p>
+              <p class="faculty-experience">
+                <i class="fa fa-briefcase me-2"></i>{{ member.experience }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Faculty/Team End -->

@@ -1,0 +1,144 @@
+<!-- Subjects/Skills Start -->
+<section class="container-xxl py-6 pb-5" id="subjects" appFadeIn>
+  <div class="container">
+    <div class="row g-5">
+      <!-- Section Title -->
+      <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+        <h1 class="display-5 mb-5">Subjects I Teach & My Experience</h1>
+
+        <!-- Tab Navigation -->
+        <p class="mb-4">
+          I specialize in multiple subjects with proven teaching methodologies and years of
+          experience helping students achieve their academic goals.
+        </p>
+
+        <h3 class="mb-4">Teaching Approach</h3>
+        <div class="row gy-2 gx-4 mb-4">
+          <div class="col-sm-6">
+            <p class="mb-0">
+              <i class="fa fa-arrow-right text-primary me-2"></i>Personalized Learning Plans
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <p class="mb-0">
+              <i class="fa fa-arrow-right text-primary me-2"></i>Concept-Based Teaching
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <p class="mb-0">
+              <i class="fa fa-arrow-right text-primary me-2"></i>Regular Progress Tracking
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <p class="mb-0">
+              <i class="fa fa-arrow-right text-primary me-2"></i>Doubt Clearing Sessions
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Exam Strategies</p>
+          </div>
+          <div class="col-sm-6">
+            <p class="mb-0">
+              <i class="fa fa-arrow-right text-primary me-2"></i>Study Material Provided
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Subjects Skills -->
+      <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+        <div class="liquid-tab-container mb-5">
+          <button
+            class="liquid-glass-btn tab-btn"
+            [class.active]="activeTab === 'subjects'"
+            (click)="setActiveTab('subjects')"
+          >
+            <span class="btn-content">
+              <i class="fa fa-book me-2"></i>
+              <span class="btn-text">Subjects</span>
+            </span>
+            <span class="liquid-shine"></span>
+          </button>
+          <button
+            class="liquid-glass-btn tab-btn"
+            [class.active]="activeTab === 'experience'"
+            (click)="setActiveTab('experience')"
+          >
+            <span class="btn-content">
+              <i class="fa fa-briefcase me-2"></i>
+              <span class="btn-text">Experience</span>
+            </span>
+            <span class="liquid-shine"></span>
+          </button>
+        </div>
+
+        <!-- Subjects Tab -->
+        <div class="tab-content" *ngIf="activeTab === 'subjects'">
+          <div id="tab-1" class="tab-pane fade show active">
+            <!-- CUSTOMIZATION: Update subjects.json to change these -->
+            <div class="row gy-5" *ngFor="let subject of subjects">
+              <div class="d-flex align-items-center">
+                <i [class]="'fa ' + subject.icon + ' fa-3x text-primary flex-shrink-0'"></i>
+                <div class="ms-4">
+                  <h5>{{ subject.name }}</h5>
+                  <p class="mb-0">{{ subject.description }}</p>
+                </div>
+              </div>
+              <div class="progress">
+                <div
+                  class="progress-bar bg-primary"
+                  role="progressbar"
+                  [style.width.%]="subject.proficiency"
+                  [attr.aria-valuenow]="subject.proficiency"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  {{ subject.proficiency }}%
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experience Tab -->
+        <div class="tab-content" *ngIf="activeTab === 'experience'">
+          <div id="tab-2" class="tab-pane fade show active">
+            <!-- CUSTOMIZATION: Update tutor-profile.json experience section -->
+            <div class="row gy-5">
+              <div class="d-flex pt-2">
+                <h5 class="me-4">10+ Years Teaching Experience</h5>
+              </div>
+              <ul class="timeline">
+                <li>
+                  <h5>2020 - Present</h5>
+                  <p><strong>Senior Tutor & Coaching Center Owner</strong></p>
+                  <p>
+                    Running successful coaching center with 100+ students, specializing in CBSE/ICSE
+                    board exam preparation
+                  </p>
+                </li>
+                <li>
+                  <h5>2015 - 2020</h5>
+                  <p><strong>Home Tutor & Online Educator</strong></p>
+                  <p>
+                    Provided personalized tutoring to 200+ students with 95% success rate in board
+                    exams
+                  </p>
+                </li>
+                <li>
+                  <h5>2013 - 2015</h5>
+                  <p><strong>Subject Matter Expert</strong></p>
+                  <p>
+                    Worked with leading educational platforms creating content and teaching
+                    materials
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Subjects/Skills End -->
