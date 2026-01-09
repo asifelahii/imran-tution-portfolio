@@ -1,0 +1,55 @@
+{
+  "INSTRUCTIONS": "📝 CUSTOMIZE THIS FILE - Add your experience and education timeline",
+  "experience": [
+    {
+      "id": 1,
+      "title": "Senior Mathematics Tutor",
+      "institution": "Your Coaching Institute Name",
+      "period": "2020 - Present",
+      "description": "Teaching advanced mathematics to Grade 11-12 students, specializing in JEE preparation.",
+      "type": "experience"
+    },
+    {
+      "id": 2,
+      "title": "Physics Teacher",
+      "institution": "Another Institute/School Name",
+      "period": "2015 - 2020",
+      "description": "Taught physics to high school students with focus on conceptual clarity and problem solving.",
+      "type": "experience"
+    },
+    {
+      "id": 3,
+      "title": "Online Educator",
+      "institution": "Your Platform Name",
+      "period": "2018 - Present",
+      "description": "Created online courses and conducted live classes for students across India.",
+      "type": "experience"
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "title": "Master of Science (M.Sc.) in Mathematics",
+      "institution": "Your University Name",
+      "period": "2013 - 2015",
+      "description": "Specialized in Applied Mathematics and Statistical Methods.",
+      "type": "education"
+    },
+    {
+      "id": 2,
+      "title": "Bachelor of Science (B.Sc.) in Physics",
+      "institution": "Your College Name",
+      "period": "2010 - 2013",
+      "description": "Graduated with First Class Honors in Physics, Mathematics, and Chemistry.",
+      "type": "education"
+    },
+    {
+      "id": 3,
+      "title": "B.Ed. (Bachelor of Education)",
+      "institution": "Education College Name",
+      "period": "2015 - 2016",
+      "description": "Professional teaching qualification with focus on pedagogy and educational psychology.",
+      "type": "education"
+    }
+  ]
+}

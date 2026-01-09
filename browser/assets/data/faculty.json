@@ -1,0 +1,14 @@
+{
+  "INSTRUCTIONS": "📝 CUSTOMIZE THIS FILE - Add faculty/team members. IMAGE: Place in src/assets/images/team/",
+  "faculty": [
+    {
+      "id": 1,
+      "name": "Al-Imran",
+      "designation": "Mathematics & Science Tutor",
+      "imageUrl": "assets/images/team/al-imran.jpg",
+      "socialMedia": {
+        "facebook": "https://www.facebook.com/muhammademranalehsan"
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "INSTRUCTIONS": "📝 CUSTOMIZE THIS FILE - Add your subjects and proficiency levels (0-100)",
+  "subjects": [
+    {
+      "name": "Mathematics",
+      "proficiency": 95,
+      "icon": "fa-calculator"
+    },
+    {
+      "name": "Physics",
+      "proficiency": 88,
+      "icon": "fa-atom"
+    },
+    {
+      "name": "Chemistry",
+      "proficiency": 85,
+      "icon": "fa-flask"
+    },
+    {
+      "name": "Biology",
+      "proficiency": 82,
+      "icon": "fa-microscope"
+    },
+    {
+      "name": "General Science",
+      "proficiency": 90,
+      "icon": "fa-atom"
+    }
+  ]
+}

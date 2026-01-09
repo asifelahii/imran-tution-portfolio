@@ -1,0 +1,27 @@
+{
+  "INSTRUCTIONS": "📝 CUSTOMIZE THIS FILE - Replace all values with your tutor information",
+  "name": "Al-Imran",
+  "title": "Mathematics & Science Tutor",
+  "typedRoles": [
+    "Mathematics Tutor",
+    "Science Tutor",
+    "Honours Student in Mathematics",
+    "Joypurhat Educator"
+  ],
+  "aboutText": "Currently pursuing Honours in Mathematics at Joypurhat Government College, I am passionate about teaching science and mathematics. I help students understand complex concepts through clear explanations and practical examples. My goal is to make learning engaging and help students achieve their academic goals.",
+  "yearsExperience": 3,
+  "happyStudents": 50,
+  "coursesCompleted": 15,
+  "awardsReceived": 5,
+  "videoUrl": "https://www.youtube.com/embed/YOUR_VIDEO_ID",
+  "email": "contact.alimran@example.com",
+  "phone": "+880 1329-608654",
+  "address": "Joypurhat, Bangladesh",
+  "socialMedia": {
+    "facebook": "https://www.facebook.com/muhammademranalehsan",
+    "twitter": "https://twitter.com/yourhandle",
+    "instagram": "https://www.instagram.com/yourprofile",
+    "linkedin": "https://www.linkedin.com/in/yourprofile",
+    "youtube": "https://www.youtube.com/@yourchannel"
+  }
+}

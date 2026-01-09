@@ -1,0 +1,128 @@
+{
+  "INSTRUCTIONS": "📝 CUSTOMIZE THIS FILE - Add your courses. IMPORTANT: Update category filters and image paths!",
+  "IMAGE_INSTRUCTIONS": "Place course images in src/assets/images/courses/ folder",
+  "courses": [
+    {
+      "id": 1,
+      "title": "Advanced Mathematics - Grade 11-12",
+      "description": "Comprehensive coverage of Calculus, Algebra, Trigonometry with problem-solving techniques.",
+      "category": "mathematics",
+      "imageUrl": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600&h=400&fit=crop",
+      "duration": "6 months",
+      "grade": "Grade 11-12",
+      "mode": "both"
+    },
+    {
+      "id": 2,
+      "title": "Physics Masterclass",
+      "description": "Complete physics course covering Mechanics, Thermodynamics, Electromagnetism, and Optics.",
+      "category": "science",
+      "imageUrl": "https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?w=600&h=400&fit=crop",
+      "duration": "8 months",
+      "grade": "Grade 11-12",
+      "mode": "both"
+    },
+    {
+      "id": 3,
+      "title": "JEE Main & Advanced Preparation",
+      "description": "Intensive coaching for JEE with regular mock tests and performance analysis.",
+      "category": "exam-prep",
+      "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&h=400&fit=crop",
+      "duration": "1 year",
+      "grade": "Grade 11-12",
+      "mode": "both"
+    },
+    {
+      "id": 4,
+      "title": "Chemistry Complete Course",
+      "description": "Organic, Inorganic, and Physical Chemistry with practical applications and experiments.",
+      "category": "science",
+      "imageUrl": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&h=400&fit=crop",
+      "duration": "8 months",
+      "grade": "Grade 11-12",
+      "mode": "both"
+    },
+    {
+      "id": 5,
+      "title": "NEET Biology Crash Course",
+      "description": "Fast-track preparation for NEET Biology with focus on important topics and MCQ practice.",
+      "category": "exam-prep",
+      "imageUrl": "https://images.unsplash.com/photo-1578496479914-7ef3b0193be3?w=600&h=400&fit=crop",
+      "duration": "4 months",
+      "grade": "Grade 11-12",
+      "mode": "online"
+    },
+    {
+      "id": 6,
+      "title": "English Grammar & Writing",
+      "description": "Improve grammar, vocabulary, essay writing, and comprehension skills.",
+      "category": "languages",
+      "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&h=400&fit=crop",
+      "duration": "5 months",
+      "grade": "Grade 8-12",
+      "mode": "both"
+    },
+    {
+      "id": 7,
+      "title": "Foundation Mathematics - Grade 8-10",
+      "description": "Strong foundation building in basic mathematics concepts for middle school students.",
+      "category": "mathematics",
+      "imageUrl": "https://images.unsplash.com/photo-1509228468518-180dd4864904?w=600&h=400&fit=crop",
+      "duration": "6 months",
+      "grade": "Grade 8-10",
+      "mode": "both"
+    },
+    {
+      "id": 8,
+      "title": "Board Exam Preparation",
+      "description": "Complete preparation for CBSE/State board exams with previous year papers and tips.",
+      "category": "exam-prep",
+      "imageUrl": "https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?w=600&h=400&fit=crop",
+      "duration": "3 months",
+      "grade": "Grade 10 & 12",
+      "mode": "both"
+    },
+    {
+      "id": 9,
+      "title": "Computer Programming Basics",
+      "description": "Introduction to Python programming and computational thinking for beginners.",
+      "category": "technology",
+      "imageUrl": "https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=600&h=400&fit=crop",
+      "duration": "4 months",
+      "grade": "Grade 9-12",
+      "mode": "online"
+    }
+  ],
+  "categories": [
+    {
+      "id": "all",
+      "label": "All Courses",
+      "filter": "*"
+    },
+    {
+      "id": "mathematics",
+      "label": "Mathematics",
+      "filter": ".mathematics"
+    },
+    {
+      "id": "science",
+      "label": "Science",
+      "filter": ".science"
+    },
+    {
+      "id": "languages",
+      "label": "Languages",
+      "filter": ".languages"
+    },
+    {
+      "id": "exam-prep",
+      "label": "Exam Preparation",
+      "filter": ".exam-prep"
+    },
+    {
+      "id": "technology",
+      "label": "Technology",
+      "filter": ".technology"
+    }
+  ]
+}
